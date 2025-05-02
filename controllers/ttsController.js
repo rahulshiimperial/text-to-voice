@@ -30,7 +30,7 @@ exports.getVoiceIds = async (req, res) => {
     res.status(200).json({
       status: "success",
       idWithName,
-      voices,
+      // voices,
     });
   } catch (err) {
     res.status(500).json({
