@@ -2,7 +2,11 @@ const bodyParser = require('body-parser')
 const express = require('express')
 const app = express()
 const cors = require('cors');
-app.use(cors({ origin: true, credentials: true }));
+app.use(cors({
+    origin: '*',
+    methods: ['GET', 'POST', 'PUT', 'DELETE'],
+    allowedHeaders: ['Content-Type', 'Authorization']
+  }));
 
 require('dotenv').config()
 const port = 2000
